@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> All the Dogs that will go to Heaven </h1>
+    <ul class = "heavenDog">
+    <%for(let i = 0; i < dogs.length; i++){%>
+        <li><a href = "<%=dogs[i]._id%>"><%=dogs[i].name%></a></li>
+    <%}%>
+    </ul>
+    <form action = "/dogs/new" method = "GET">
+        <button type = "submit">Create New</button>
+    </form>
+</body>
+</html>
