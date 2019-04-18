@@ -76,7 +76,7 @@ router.get('/:id/edit', (req, res) => {
 //SHOW DOG
 
 router.get('/:id', (req, res) => {
-    Dogs.findbyId(req.params.id, (err, foundDog) => {
+    Dogs.findById(req.params.id, (err, foundDog) => {
         if(err){
             res.send(err);
         } else {
