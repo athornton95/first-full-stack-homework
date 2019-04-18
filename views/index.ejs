@@ -11,10 +11,16 @@
     <ul class = "heavenDog">
     <%for(let i = 0; i < dogs.length; i++){%>
         <li><a href = "<%=dogs[i]._id%>"><%=dogs[i].name%></a></li>
+        <form action = "/dogs/<%=dogs[i]._id%>?_method=DELETE" method="POST">
+            <button type = "submit">Send Dog to Heaven</button>
+        </form>
+        <form action = "/dogs/<%=dogs[i]._id%>/edit" method="GET">
+            <button type = "submit">Trade in Your Dog</button>
+        </form>
     <%}%>
     </ul>
     <form action = "/dogs/new" method = "GET">
-        <button type = "submit">Create New</button>
+        <button type = "submit" >Create New</button>
     </form>
 </body>
 </html>
